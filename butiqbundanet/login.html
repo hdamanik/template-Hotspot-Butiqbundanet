@@ -1,0 +1,221 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+
+<title>Butiq Bunda Net - Home</title>
+<meta name="viewport" content="width=device-width,initial-scale=1.0" />
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+<link rel="icon" type="image/x-icon" href="img/favicon.png" sizes="16x16 24x24 32x32 48x48" />
+<link rel="stylesheet" href="css/style.css" type="text/css" />
+<link rel="stylesheet" type="text/css" href="css/screen.css" media="screen" />
+<link rel="stylesheet" href='css/fonts-awesome.css' type='text/css'/>
+
+<script type="text/javascript" src="js/jquery-1.4.2.min.js"></script>
+<script type="text/javascript">
+$(document).ready(function() {
+	$('#tab1').fadeIn('slow'); //tab pertama ditampilkan
+	$('ul#nav li a').click(function() { // jika link tab di klik
+		$('ul#nav li a').removeClass('active'); //menghilangkan class active (yang tampil)
+		$(this).addClass("active"); // menambahkan class active pada link yang diklik
+		$('.tab_konten').hide(); // menutup semua konten tab
+		var aktif = $(this).attr('href'); // mencari mana tab yang harus ditampilkan
+		$(aktif).fadeIn('slow'); // tab yang dipilih, ditampilkan
+		return false;
+	});
+
+});
+</script>
+
+$(if chap-id)
+	<form name="sendin" action="$(link-login-only)" method="post">
+		<input type="hidden" name="username" />
+		<input type="hidden" name="password" />
+		<input type="hidden" name="dst" value="$(link-orig)" />
+		<input type="hidden" name="popup" value="true" />
+	</form>
+	
+	<script type="text/javascript" src="/md5.js"></script>
+	<script type="text/javascript">
+	<!--
+	    function doLogin() {
+		document.sendin.username.value = document.login.username.value;
+		document.sendin.password.value = hexMD5('$(chap-id)' + document.login.password.value + '$(chap-challenge)');
+		document.sendin.submit();
+		return false;
+	    }
+	//-->
+	</script>
+$(endif)
+
+</head>
+<body>
+<div class="w960">
+	<div id="header" class="left">
+			<div class="logo left">
+				<a href="login.html">Butiq Bunda Net</a>
+			</div>
+			
+			<ul class="nav">
+				<li><a href="login.html" class="selected"><i class="icon-home"></i> Home</a></li>
+               	 	
+<!--				<li><a href="warnet.html"><i class="icon-circle-arrow-right"></i> Warnet</a></li>
+                		<li><a href="ps.html"><i class="icon-play-circle"></i> Playstation</a></li> -->
+				<li></li>
+				<li><a href="#"><i class="icon-phone-sign"></i> Cs. 085921463959</a></li>
+			</ul>
+		</div>
+
+	<div id="content" class="mt15 left mb15">
+		<div class="w615 ml15 mb15 left">
+	
+<ul id="nav">
+        <li><a href="#tab1" class="active">About</a></li>
+        <li><a href="#tab3">Voucher Hotspot</a></li>
+	 <li><a href="#tab2">Info Pembelian</a></li>
+    </ul>
+    <div class="clear"></div>
+    <div id="konten">		
+        <div style="display: none;" id="tab1" class="tab_konten">
+		           	<div align="center" style="width:100%; height:200px; background:url(img/promo2.png) no-repeat;  margin:10px 0 10px 0; border-radius:5px;"></div>
+		           	<div align="center" style="width:100%; height:200px; background:url(img/promo3.png) no-repeat;  margin:10px 0 10px 0; border-radius:5px;"></div>
+
+<p></p>
+$(if trial == 'yes')
+<table class="tabel tabula">
+				<tr>
+					<td width="160px">
+           				<a href="$(link-login-only)?dst=$(link-orig-esc)&amp;username=T-$(mac-esc)"><input type="button" value="CONNECT" /></a>
+					</td>
+					<td>Tekan tombol di samping untuk mendapatkan akses Internet uji coba Gratis selama 5 Menit.</td>
+				</tr>
+			</table>			
+ $(endif)						
+        </div>
+        
+        <div style="display: none;" id="tab2" class="tab_konten">
+        	<h2><div class="box info"><div>Agar bisa menggunakan fasilitas Internet Hotspot ini silahkan Berlangganan Voucher dengan cara menghubungi :<li> Via Call atau SMS/WA - 085921463959</li>
+    	<li>Jln. Asahan KM 22. Desa sahkuda Bayu Huta III Pasar Baru, Sumatera Utara, Kab. Simalungun, Gunung Malela </li></div></h2>
+				           	<div align="center" style="width:100%; height:200px; background:url(img/promo3.png) no-repeat;  margin:10px 0 10px 0; border-radius:5px;"></div>
+<br />
+<div class="checklist">
+	<ul>
+		
+	</ul>
+</div>
+	</p>
+        </div>
+
+		<div style="display: none;" id="tab3" class="tab_konten">
+<br><div class="box download"><div>Agar lebih memudahkan pelanggan Hotspot, kami menyediakan beberapa pilihan Voucher yang disesuaikan dengan budget dan kebutuhan akses internet anda tanpa ada batasan quota download dan Upload. Jadi tidak usah takut kuota habis, karna Hotspot kami benar - benar UNLIMITED. Untuk berlangganan dan pemasangan Wifi di rumahmu hubungi kami sekarang juga.</div></div><p></p>
+			<div style="width:100%;">				
+
+
+
+<table class="tabel tabula">
+  <tr>
+	<th>Nama Paket</th>
+	<th>Harga</th>
+	<th>Waktu</th>
+	<th>Masa Aktif</th>
+	<th>Speed</th>
+  </tr>
+  <tr>
+    <td>Paket Game</td>
+    <td>3.000</td>
+    <td>3 Jam</td>
+    <td>1 Hari</td>
+	<td rowspan="5" align="center"> Upto 10 Mbps</td>
+  </tr>
+  <tr>
+    <td>Paket Jam</td>
+    <td>5.000</td>
+    <td>5 Jam</td>
+    <td>2 Hari</td>d>
+  </tr>
+   <tr>
+    <td>Paket Harian</td>
+    <td>10.000</td>
+    <td>24 Jam</td>
+    <td>1 Minggu</td>d>
+  </tr>
+  <tr>
+    <td>Paket Mingguan</td>
+    <td>20.000</td>
+    <td>1 Minggu </td>
+    <td>2 Minggu</td>d>
+  </tr>
+   <tr>
+    <td>Paket Bulanan</td>
+    <td>100.000</td>
+    <td>1 Bulan</td>
+    <td>1 Bulan</td>
+  </tr>
+</table>
+
+			</div>
+$(if trial == 'yes')
+<table class="tabel tabula">
+				<tr>
+					<td width="160px">
+           				<a href="$(link-login-only)?dst=$(link-orig-esc)&amp;username=T-$(mac-esc)"><input type="button" value="CONNECT" /></a>
+					</td>
+					<td>Tekan tombol di samping untuk mendapatkan akses Internet uji coba Gratis selama 5 Menit.</td>
+				</tr>
+			</table>			
+ $(endif)				
+        </div>
+	<div style="display: none;" id="tab4" class="tab_konten">
+		<div align="center" style="width:100%; height:580px; background:url(img/area.png) no-repeat center; margin:10px 0 10px 0; border-radius:5px;"></div>
+		</div>
+    </div>
+
+		</div>
+		
+		<div class="w315 right">
+				
+
+		  <div class="left mr15 mb15"></div>
+
+				<div class="left mr15">
+					<div class="w300 left mb15">
+						<div class="left bg-ijo" style="width: 100%;">
+							<div class="cat-tit"><i class="icon-user"></i> Login</div>
+						</div>                       					
+						<form class="form"  name="login" action="$(link-login-only)" method="post"
+					    $(if chap-id) onSubmit="return doLogin()" $(endif)>
+						<input type="hidden" name="dst" value="$(link-orig)" />
+						<input type="hidden" name="popup" value="true" />
+                        
+           					 <label>User :</label>
+								<input type="text" id="username" name="username" placeholder="Enter your username" /><br />							
+           					 <label>Pass :</label>
+            					<input type="password" id="password" name="password" placeholder="Enter your password" />
+           					 <input type="submit" value="LOGIN" />
+    					</form>
+ $(if error)<div class="warning"><i class="icon-warning-sign"></i> $(error)</div> $(endif)						
+					</div>
+<!--					<div class="w300 left">				
+					<div class="box note"><div>Silakan hubungi 085921463959 apabila terjadi Error login.</div></div>
+					</div> -->
+					
+
+				</div>
+				
+				<div class="left mr15 mb15">
+					<div class="w300 left bg-abu-radial">
+						<div class="left bg-ijo" style="width: 100%;">
+							<div class="cat-tit"><i class="icon-chevron-sign-right"></i> Iklan</div>
+						</div>
+						<a href="login.html"><img src="img/iklan.gif" /></a><br />
+					 </div>
+				</div>
+	  </div>
+	</div>
+	
+	<div id="footer" class="left">
+	Butiq Bunda Net | Copyright © 2019.- All Rights Reserve.
+	</div>
+		
+</div>
+</body>
+</html>

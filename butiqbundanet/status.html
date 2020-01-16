@@ -1,0 +1,127 @@
+<html>
+<head>
+<meta name="viewport" content="width=device-width,initial-scale=1.0" />
+<link rel="icon" type="image/x-icon" href="img/favicon.png" sizes="16x16 24x24 32x32 48x48" />
+<title> Status Hotspot</title>
+$(if refresh-timeout)
+<meta http-equiv="refresh" content="$(refresh-timeout-secs)">
+$(endif)
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+<link rel="stylesheet" href='css/fonts-awesome.css' type='text/css'/>
+<link rel="stylesheet" href="css/style2.css" type="text/css" />
+<meta http-equiv="pragma" content="no-cache">
+<meta http-equiv="expires" content="-1">
+<script language="JavaScript">
+<!--
+$(if advert-pending == 'yes')
+    var popup = '';
+    function focusAdvert() {
+	if (window.focus) popup.focus();
+    }
+    function openAdvert() {
+	popup = open('$(link-advert)', 'hotspot_advert', '');
+	setTimeout("focusAdvert()", 1000);
+    }
+$(endif)
+    function openLogout() {
+	if (window.name != 'hotspot_status') return true;
+        open('$(link-logout)', 'hotspot_logout', 'toolbar=0,location=0,directories=0,status=0,menubars=0,resizable=1,width=280,height=250');
+	window.close();
+	return false;
+    }
+//-->
+</script>
+</head>
+<body bottommargin="0" topmargin="0" leftmargin="0" rightmargin="0"
+$(if advert-pending == 'yes')
+	onLoad="openAdvert()"
+$(endif)
+>
+
+<table width="100%" height="100%">
+
+<tr>
+<td align="center" valign="middle">
+
+    <div id="content">
+    
+    <form action="$(link-logout)" name="logout" onSubmit="return openLogout()">
+
+$(if session-time-left)
+<div width="100%" align="center" style="margin: 0 5px 5px 5px;">
+<table width="100%">
+  <tr>
+    <td width="50%" align="center"><div class="status"><span style="text-transform:uppercase;">$(uptime)</span><br />
+    <span align="center" style="font-size:10px;">Waktu Online Anda</span></div></td>
+    <td align="center"><div class="status"><span style="text-transform:uppercase;">$(session-time-left)</span><br /> 
+	<span align="center" style="font-size:10px;">Sisa Waktu Anda</span></div></td>
+  </tr>
+</table>
+</div>
+$(endif)
+    
+<table width="100%" height="100%">
+
+<tr>
+<td align="center" valign="middle">
+<b>Anda berhasil Login dari Hotspot, Berikut informasi akun anda:</b> <br><br>
+
+<table width="100%" class="tabula">
+<th colspan="3"></th>
+ $(if login-by == 'trial')
+  <tr bgcolor="#b60e10">
+    <td width="50%"><i class="icon-user"></i> Account Login</td>
+    <td width="50%">Trial</td>
+  </tr>
+  <tr>
+    <td><i class="icon-globe"></i> IP Address </td>
+    <td>$(ip)</td>
+  </tr>
+  <tr>
+    <td><i class="icon-sitemap"></i> MAC Address </td>
+    <td>$(mac)</td>
+  </tr>
+    $(elif login-by != 'mac')  
+  <tr bgcolor="#b60e10">
+    <td><i class="icon-user"></i> Account Login</td>
+    <td>$(username)</td>
+  </tr>
+ </tr>
+  <tr>
+    <td><i class="icon-globe"></i> IP Address </td>
+    <td>$(ip)</td>
+  </tr>
+  <tr>
+    <td><i class="icon-sitemap"></i> MAC Address </td>
+    <td>$(mac)</td>
+  </tr>
+$(endif)	
+	<tr>
+	  <td><i class="icon-cloud-download"></i> Download</td>
+	  <td> $(bytes-out-nice)</td></tr>
+	<tr>
+	  <td><i class="icon-cloud-upload"></i> Upload</td>
+	  <td> $(bytes-in-nice)</td></tr>
+$(if blocked == 'yes')
+	<tr>
+	  <td><i class="icon-meh"></i> Status </td>
+	  <td> <div style="color: #FF8080"><a href="$(link-advert)" target="hotspot_advert"> Advertisement</a> required</div></td>
+$(elif refresh-timeout)
+	<tr>
+	  <td><i class="icon-refresh"></i> Status refresh </td>
+	  <td> $(refresh-timeout)</td>
+$(endif)
+</table>
+$(if login-by-mac != 'yes')
+<!-- user manager link. if user manager resides on other router, replace $(hostname) by its address
+<button onclick="document.location='http://$(hostname)/user?subs='; return false;">status</button>
+<!-- end of user manager link --> 
+  
+<br>
+<form action="$(link-login)" name="login" onSubmit="return openLogin()">
+<input type="submit" value="log Off">
+</form>
+</td>
+</table>
+</body>
+</html>
